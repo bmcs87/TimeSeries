@@ -1,0 +1,3 @@
+acf <- read.csv("acf.csv")
+acf(acf$Vehicle.Sales)
+
