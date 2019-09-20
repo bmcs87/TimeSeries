@@ -1,3 +1,10 @@
 acf <- read.csv("acf.csv")
-acf(acf$Vehicle.Sales)
 
+acf(acf$Vehicle.Sales)
+acf(acf$SRPVs)
+
+sales1monthlag <- lm(acf$Vehicle.Sales[3:33] ~ acf$Vehicle.Sales[2:32])
+summary(sales1monthlag)
+
+SRPV1monthlag <- lm(acf$SRPVs[3:33] ~ acf$SRPVs[2:32])
+summary(SRPV1monthlag)
